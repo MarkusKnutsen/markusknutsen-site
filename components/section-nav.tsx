@@ -12,7 +12,15 @@ export function SectionNav() {
   return (
     <nav className="sectionNav" aria-label="Section navigation">
       {links.map((link) => (
-        <a key={link.href} href={link.href} className="sectionNav__link">
+        <a
+          key={link.href}
+          href={link.href}
+          className="sectionNav__link"
+          onClick={(event) => {
+            const menu = event.currentTarget.closest("details");
+            if (menu) menu.open = false;
+          }}
+        >
           {link.label}
         </a>
       ))}

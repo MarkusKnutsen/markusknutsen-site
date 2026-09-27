@@ -3,13 +3,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://markusknutsen.no"),
-  title: "Markus Knutsen | Installation Analysis Engineer & Python Developer",
+  title: "Markus Knutsen | Analysis Engineer & Developer at Entail",
   description:
-    "Personal website for Markus Knutsen — offshore installation analysis engineer with a focus on Python, automation, hydrodynamics, and practical engineering workflows.",
+    "Markus Knutsen, Analysis Engineer & Developer at Entail in Oslo. Client-facing analysis, hydrodynamics, dynamic simulation, and practical engineering software.",
   openGraph: {
     title: "Markus Knutsen",
     description:
-      "Installation analysis engineer working at the intersection of offshore operations, Python development, and engineering automation.",
+      "Analysis Engineer & Developer at Entail, combining client-facing engineering analysis with software development for offshore operations.",
     url: "https://markusknutsen.no",
     siteName: "Markus Knutsen"
   }

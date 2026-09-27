@@ -63,9 +63,21 @@ const methods = [
 
 const timeline = [
 	{
+		role: "Analysis Engineer & Developer",
+		company: "Entail",
+		companyUrl: "https://www.entail.no/",
+		period: "Aug 2026 — Present",
+		location: "Oslo, Norway",
+		bullets: [
+			"Client-facing engineering analysis combining hydrodynamics, visualization, and complex dynamic simulations.",
+			"Turning engineering methods into reliable software for analysis workflows and Entail's SaaS platform.",
+			"Working across software development and offshore engineering teams to keep tools grounded in practical analysis needs.",
+		],
+	},
+	{
 		role: "Installation Analysis Engineer",
 		company: "TechnipFMC",
-		period: "Aug 2024 — Present",
+		period: "Aug 2024 — Jul 2026",
 		location: "Lysaker, Oslo",
 		bullets: [
 			"Installation analysis of offshore structures and pipelines for safe and efficient subsea operations.",
@@ -115,9 +127,8 @@ export default function HomePage() {
 
 				<details className="topbarMobile">
 					<summary className="topbarMobile__summary">
-						<a href="#top" className="brand">
-							Markus Knutsen
-						</a>
+						<span className="brand">Markus Knutsen</span>
+						<span className="srOnly"> — Toggle navigation</span>
 						<span className="topbarMobile__toggle" aria-hidden="true">
 							<span className="topbarMobile__line topbarMobile__line--one" />
 							<span className="topbarMobile__line topbarMobile__line--two" />
@@ -139,7 +150,7 @@ export default function HomePage() {
 				<div className="hero__inner card">
 					<div className="hero__content">
 						<p className="eyebrow">
-							Installation Analysis Engineer · Python Developer
+							Analysis Engineer &amp; Developer · Entail
 						</p>
 
 						<h1>
@@ -148,10 +159,12 @@ export default function HomePage() {
 						</h1>
 
 						<p className="hero__lead">
-							I work at the intersection of offshore engineering, hydrodynamics,
-							and software. My focus is turning complex analysis workflows into
-							reliable tools that are easier to use, easier to maintain, and
-							more valuable in day-to-day engineering work.
+							I work as an Analysis Engineer &amp; Developer at{" "}
+							<a className="textLink" href="https://www.entail.no/">Entail</a>
+							, combining client-facing analysis with engineering software
+							development. My work brings together hydrodynamics, dynamic
+							simulation, and visualization to turn engineering methods into
+							reliable, practical tools.
 						</p>
 
 						<div className="hero__meta">
@@ -212,9 +225,9 @@ export default function HomePage() {
 						<p className="heroLocation">Oslo, Norway</p>
 
 						<div className="heroCardMini">
-							<p className="heroCardMini__label">Current focus</p>
+							<p className="heroCardMini__label">Now at Entail</p>
 							<p className="heroCardMini__text">
-								Engineering tools that are simple to use and robust in practice.
+								Client analysis and software development, connected by hands-on engineering.
 							</p>
 						</div>
 					</div>
@@ -233,7 +246,14 @@ export default function HomePage() {
 						solid and practical to use.
 					</p>
 					<p>
-						At TechnipFMC, I have worked with installation analysis of
+						At <a className="textLink" href="https://www.entail.no/">Entail</a>,
+						I combine customer analysis projects with the development of
+						engineering software. I work between software developers and
+						offshore engineers, helping translate analysis methods into
+						robust applications for the company&apos;s SaaS platform.
+					</p>
+					<p>
+						Previously at TechnipFMC, I worked with installation analysis of
 						structures and pipelines, Python-based automation, data analysis,
 						and project engineering offshore. The work I enjoy most is when a
 						vague need turns into a concrete tool, workflow, or improvement that
@@ -245,8 +265,12 @@ export default function HomePage() {
 					<p className="sectionLabel">Snapshot</p>
 					<div className="statsList">
 						<div>
-							<span>Role</span>
-							<strong>Installation Analysis Engineer</strong>
+							<span>Current role</span>
+							<strong>Analysis Engineer &amp; Developer</strong>
+						</div>
+						<div>
+							<span>Current company</span>
+							<strong><a className="textLink" href="https://www.entail.no/">Entail</a></strong>
 						</div>
 						<div>
 							<span>Core stack</span>
@@ -254,7 +278,7 @@ export default function HomePage() {
 						</div>
 						<div>
 							<span>Domain</span>
-							<strong>Offshore operations and subsea installation</strong>
+							<strong>Hydrodynamics, dynamic analysis, and offshore operations</strong>
 						</div>
 						<div>
 							<span>Strength</span>
@@ -275,7 +299,7 @@ export default function HomePage() {
 						</h2>
 					</div>
 					<p className="sectionIntro">
-						A large part of my work has been improving an internal Python-based
+						At TechnipFMC, a large part of my work involved improving an internal Python-based
 						automatic pipelay analysis framework by making it more maintainable,
 						more robust, and easier for engineers to use.
 					</p>
@@ -315,7 +339,7 @@ export default function HomePage() {
 						))}
 					</div>
 					<p className="supportText">
-						I am especially motivated by roles where development work stays
+						I am especially motivated by development work that stays
 						close to real engineering problems — offshore operations,
 						hydrodynamics, simulation, and internal tooling with measurable
 						practical value.
@@ -359,11 +383,15 @@ export default function HomePage() {
 						>
 							<div className="timelineItem__meta">
 								<span>{entry.period}</span>
-								<span>{entry.location}</span>
+								{entry.location && <span>{entry.location}</span>}
 							</div>
 							<div className="timelineItem__content">
 								<h3>{entry.role}</h3>
-								<p className="timelineItem__company">{entry.company}</p>
+								<p className="timelineItem__company">
+									{entry.companyUrl ? (
+										<a className="textLink" href={entry.companyUrl}>{entry.company}</a>
+									) : entry.company}
+								</p>
 								<ul>
 									{entry.bullets.map((bullet) => (
 										<li key={bullet}>{bullet}</li>
@@ -377,7 +405,7 @@ export default function HomePage() {
 
 			<section className="gridTwoCol">
 				<article className="card sectionBlock">
-					<p className="sectionLabel">Other work</p>
+					<p className="sectionLabel">Other work at TechnipFMC</p>
 					<h2>Additional contributions</h2>
 					<ul className="cleanList">
 						<li>
@@ -402,18 +430,21 @@ export default function HomePage() {
 				</article>
 
 				<article className="card sectionBlock">
-					<p className="sectionLabel">What I’m looking for</p>
-					<h2>More room to build</h2>
+					<p className="sectionLabel">Current chapter</p>
+					<h2>Connecting analysis and software</h2>
 					<p>
-						I am especially drawn to roles where software development is a
-						larger part of the job, while still staying connected to the
-						engineering domains I know well: offshore operations, hydrodynamics,
-						and analysis.
+						Since August 2026, I have worked at Entail as an Analysis
+						Engineer &amp; Developer. My role combines customer-facing
+						engineering analysis with developing the software behind it,
+						from focused analytical studies to complex simulation campaigns.
 					</p>
 					<p>
-						Python-heavy development in an engineering environment feels like
-						the natural next step for me.
+						Working on both sides helps me keep the software close to real
+						engineering needs. I help turn analysis methods into maintainable
+						applications, collaborating with software and offshore engineering
+						teams as Entail develops its SaaS platform.
 					</p>
+					<a className="button button--ghost" href="https://www.entail.no/">About Entail ↗</a>
 				</article>
 			</section>
 
@@ -423,8 +454,8 @@ export default function HomePage() {
 					<h2>Let’s connect</h2>
 					<p>
 						Feel free to reach out if you want to talk about engineering
-						software, offshore operations, Python development, or relevant
-						opportunities.
+						software, offshore operations, Python development, or shared
+						technical interests.
 					</p>
 				</div>
 

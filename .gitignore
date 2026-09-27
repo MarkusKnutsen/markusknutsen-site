@@ -5,3 +5,6 @@ out
 .env
 .env.local
 .DS_Store
+*.tsbuildinfo
+output/
+__pycache__/
